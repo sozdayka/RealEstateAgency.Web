@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 
 export class NavMenuComponent {
+    public RoleStatus:boolean = true;
+    
     collapse: string = 'collapse';
 
     collapseNavbar(): void {

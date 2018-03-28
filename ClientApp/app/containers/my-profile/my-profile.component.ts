@@ -5,6 +5,9 @@ import { Component, OnInit } from '@angular/core';
     templateUrl: './my-profile.component.html'
 })
 export class MyProfileComponent implements OnInit {
+
+    public RoleStatus:boolean = true;
+
     constructor() { }
 
     ngOnInit() { }
