@@ -1,0 +1,432 @@
+﻿<!-- Slider -->
+<div class="flexslider sliders home-property-slider">
+	<ul class="slides">
+		<li  *ngFor="let itemhouse of houses;let i = index">
+			<div class="slide-caption">
+				<article class="property-post property-post-grid clearfix">
+					<div class="property-wrap">
+						<header class="property-header clearfix">
+							
+							<h2 class="property-title text-truncate">
+								<a href="single-property.html">{{itemhouse.name}}</a>
+							</h2>
+							<p class="property-location">{{itemhouse.address}}</p>
+						</header>
+						<ul class="property-meta list-unstyled">
+								<li>{{itemhouse.shortparam}}</li>	
+						</ul>
+						<footer class="property-footer">
+							<div class="row">
+								<div class="col-sm-6">
+									<span class="property-price">
+										<span>$</span>
+										{{itemhouse.price}}
+									</span>
+								</div>
+								<div class="col-sm-6 text-right">
+									<a href="#" data-toggle="modal" data-target="#product_view{{i}}" class="btn btn-primary">Подробней</a>
+								</div>
+							</div>
+						</footer>
+					</div>
+				</article>
+			</div>
+			<img src="{{itemhouse.img}}" alt="Image">
+
+			<!-- Modal detail -->
+			<div class="modal login-modal fade product_view" id="product_view{{i}}">
+					<div class="modal-dialog house_modal">
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <h4 class="modal-title">Beach House</h4>
+						  <a href="#" data-dismiss="modal" class="closeclass pull-right">
+							<span class="glyphicon glyphicon-remove"></span>
+						  </a>
+						</div>
+	
+						<div class="modal-body">
+	
+						  <div class="row">
+							<div class="preview col-md-6">
+	
+							  <div class="preview-pic tab-content">
+								<div class="tab-pane active" id="pic-1">
+								  <img src="../../images/demo/property/1.jpg"></div>
+								<div class="tab-pane" id="pic-2">
+								  <img src="../../images/demo/property/2.jpg"></div>
+								<div class="tab-pane" id="pic-3">
+								  <img src="../../images/demo/property/3.jpg"></div>
+								<div class="tab-pane" id="pic-4">
+								  <img src="../../images/demo/property/4.jpg"></div>
+								<div class="tab-pane" id="pic-5">
+								  <img src="../../images/demo/property/5.jpg"></div>
+							  </div>
+							  <ul class="preview-thumbnail nav nav-tabs">
+								<li class="active">
+								  <a data-target="#pic-1" data-toggle="tab" aria-expanded="true">
+									<img src="../../images/demo/property/1.jpg"></a>
+								</li>
+								<li>
+								  <a data-target="#pic-2" data-toggle="tab">
+									<img src="../../images/demo/property/2.jpg"></a>
+								</li>
+								<li>
+								  <a data-target="#pic-3" data-toggle="tab">
+									<img src="../../images/demo/property/3.jpg"></a>
+								</li>
+								<li>
+								  <a data-target="#pic-4" data-toggle="tab">
+									<img src="../../images/demo/property/4.jpg"></a>
+								</li>
+								<li>
+								  <a data-target="#pic-5" data-toggle="tab">
+									<img src="../../images/demo/property/5.jpg"></a>
+								</li>
+							  </ul>
+	
+							</div>
+	
+							<div class="col-md-6 product_content">
+							  <div class="property">
+								<header class="property-header clearfix">
+								  <h2 class="property-title">
+									<a href="single-property.html">Beach House</a>
+								  </h2>
+								  <p class="property-location">1348 209th St, Flushing</p>
+								</header>
+	
+								<ul class="property-meta list-unstyled">
+								  <li>Тип: Первичное жилье</li>
+								  <li>Комнат: 4</li>
+								  <li>Жилых этажей: 2</li>
+								  <li>Общая пл: 130 м²</li>
+								  <li>Жилая: 75 м²</li>
+								  <li>Кухня: 25 м²</li>
+								  <li>Тип предложения: от посредника</li>
+								  <li>Тип стен: кирпич</li>
+								  <li>
+									Балкон:
+									<span class="glyphicon glyphicon-ok"></span>
+								  </li>
+								  <li>
+									Лифт:
+									<span class="glyphicon glyphicon-remove"></span>
+								  </li>
+								  <li>
+									Отоплением :
+									<span class="glyphicon glyphicon-ok"></span>
+								  </li>
+								  <li>
+									Терраса :
+									<span class="glyphicon glyphicon-ok"></span>
+								  </li>
+								  <li>
+									Сад :
+									<span class="glyphicon glyphicon-ok"></span>
+								  </li>
+								  <li>
+									Участк :
+									<span class="glyphicon glyphicon-ok"></span>
+								  </li>
+								  <li>высота потолка: 2,7</li>
+								  <li>утепление: внутреннее</li>
+	
+								</ul>
+							  </div>
+							  <section class="widget single-property-agent">
+								<div class="agent-info clearfix">
+								  <div class="agent-photo">
+									<img class="img-fluid" src="../../images/demo/agents/sozdayka-about.png" alt="Игорь Росляков"></div>
+								  <h3 class="name">
+									<a href="agent-single.html">Игорь Росляков</a>
+								  </h3>
+								  <span>Менеджер по продажам</span>
+								  <span class="contact">
+									<i class="fa fa-mobile-phone"></i>
+									(917) 746-5123
+								  </span>
+								</div>
+	
+							  </section>
+	
+							  <div class="space-ten"></div>
+							  <footer class="property-footer">
+								<div class="row">
+								  <div class="col-4">
+									<span class="property-price">
+									  <span>$</span>
+									  890,000
+									</span>
+								  </div>
+								  <div class="col-8 text-right">
+									<div class="btn-ground">
+									  <button type="button" class="btn btn-lg btn-primary">Записатся на просмотр</button>
+	
+									</div>
+								  </div>
+								</div>
+							  </footer>
+	
+							</div>
+						  </div>
+	
+						</div>
+					  </div>
+					</div>
+				  </div>
+			<!-- Modal detail -->
+		</li>
+		
+	</ul>
+</div>
+
+<main id="main" class="main">
+
+	<div class="container">
+
+		<div class="advance-search advance-search-1">
+			<form class="advance-search-form" method="get" autocomplete="off" action="#">
+
+				<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active">
+						<a href="#shot" aria-controls="shot" role="tab" data-toggle="tab">Быстрый фильтр</a>
+					</li>
+					<li role="presentation">
+						<a href="#full" aria-controls="full" role="tab" data-toggle="tab">Полный фильтр</a>
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane fade in active" id="shot">
+						<div class="row">
+							<div class="col-lg-10 col-md-10 col-sm-9 col-xs-12">
+								<div class="rle_searchform_box">
+									<!-- <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+									<input type="serch" placeholder="Цена от:"></div>
+								-->
+								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+									<select>
+										<option>Тип недвижимости</option>
+										<option value="1">Location 1</option>
+										<option value="2">Location 2</option>
+										<option value="3">Location 3</option>
+									</select>
+								</div>
+								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+									<select>
+										<option>Класс недвижимости</option>
+										<option value="1">Status 1</option>
+										<option value="2">Status 2</option>
+										<option value="3">Status 3</option>
+									</select>
+								</div>
+								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+									<select>
+										<option>Общая площадь</option>
+										<option value="1">24</option>
+										<option value="2">32</option>
+										<option value="3">33</option>
+										<option value="3">+55</option>
+									</select>
+								</div>
+								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+									<select>
+										<option>Цена от</option>
+										<option value="1">1000</option>
+										<option value="2">20000</option>
+										<option value="3">30000</option>
+									</select>
+								</div>
+								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+									<select>
+										<option>Цена до</option>
+										<option value="1">10000</option>
+										<option value="2">20000</option>
+										<option value="3">30000</option>
+									</select>
+								</div>
+
+								</div>
+							</div>
+							<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+								<div class="rle_searchform_btn">
+									<img src="../../images/icons/search_icon.png">
+									<p>Подобрать</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="full">
+						<div class="row">
+							<div class="col-lg-10 col-md-10 col-sm-9 col-xs-12">
+								<div class="rle_searchform_box">
+									<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+										<input type="serch" placeholder="Цена от:"></div>
+									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+										<select>
+											<option>Тип недвижимости</option>
+											<option value="1">Location 1</option>
+											<option value="2">Location 2</option>
+											<option value="3">Location 3</option>
+										</select>
+									</div>
+									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+										<select>
+											<option>Класс недвижимости</option>
+											<option value="1">Status 1</option>
+											<option value="2">Status 2</option>
+											<option value="3">Status 3</option>
+										</select>
+									</div>
+									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+										<select>
+											<option>Общая площадь</option>
+											<option value="1">24</option>
+											<option value="2">32</option>
+											<option value="3">33</option>
+											<option value="3">+55</option>
+										</select>
+									</div>
+									<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+										<select>
+											<option>Цена от</option>
+											<option value="1">1000</option>
+											<option value="2">20000</option>
+											<option value="3">30000</option>
+										</select>
+									</div>
+									<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+										<select>
+											<option>Цена до</option>
+											<option value="1">10000</option>
+											<option value="2">20000</option>
+											<option value="3">30000</option>
+										</select>
+									</div>
+
+									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+										<select>
+											<option>Класс недвижимости</option>
+											<option value="1">Status 1</option>
+											<option value="2">Status 2</option>
+											<option value="3">Status 3</option>
+										</select>
+									</div>
+									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+										<select>
+											<option>Общая площадь</option>
+											<option value="1">24</option>
+											<option value="2">32</option>
+											<option value="3">33</option>
+											<option value="3">+55</option>
+										</select>
+									</div>
+
+								</div>
+							</div>
+							<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+								<div class="rle_searchform_btn">
+									<img src="../../images/icons/search_icon.png">
+									<p>Подобрать</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<div id="category">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div class="rle_center_heading rle_bottompadder60">
+							<h1>Категории недвижимостей</h1>
+							<p>Перечень основных категорий недвижимостей на сайте</p>
+						</div>
+					</div>
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div class="row">
+							
+							<div *ngFor="let item of categorys" class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<a class="rle_popularareas_img" rel="filter">
+									<img src="{{item.img}}" alt="" title="">
+									<div class="rle_popularareas_text">
+										<h4>{{item.name}}</h4>
+									</div>
+								</a>
+								<!-- <div>{{item.name}} {{item.img}}</div> -->
+							</div>
+							<!-- <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="rle_popularareas_img" [routerLink]="['/filter']" rel="filter">
+									<img src="../../images/content/pa2.jpg" alt="" title="">
+									<div class="rle_popularareas_text">
+										<h4>Офисы</h4>
+							
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="rle_popularareas_img" [routerLink]="['/filter']" rel="filter">
+									<img src="../../images/content/pa1.jpg" alt="" title="">
+									<div class="rle_popularareas_text">
+										<h4>Los Angeles</h4>
+										<p>121 properties</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="rle_popularareas_img" [routerLink]="['/filter']" rel="filter">
+									<img src="../../images/content/pa2.jpg" alt="" title="">
+									<div class="rle_popularareas_text">
+										<h4>Colorado Springs</h4>
+										<p>121 properties</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<a class="rle_popularareas_img" [routerLink]="['/filter']" rel="filter">
+									<img src="../../images/content/pa1.jpg" alt="" title="">
+									<div class="rle_popularareas_text">
+										<h4>Частные дома</h4>
+							
+									</div>
+								</a>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="rle_popularareas_img" [routerLink]="['/filter']" rel="filter">
+									<img src="../../images/content/pa2.jpg" alt="" title="">
+									<div class="rle_popularareas_text">
+										<h4>Офисы</h4>
+							
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="rle_popularareas_img" [routerLink]="['/filter']" rel="filter">
+									<img src="../../images/content/pa1.jpg" alt="" title="">
+									<div class="rle_popularareas_text">
+										<h4>Los Angeles</h4>
+										<p>121 properties</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="rle_popularareas_img" [routerLink]="['/filter']" rel="filter">
+									<img src="../../images/content/pa2.jpg" alt="" title="">
+									<div class="rle_popularareas_text">
+										<h4>Colorado Springs</h4>
+										<p>121 properties</p>
+									</div>
+								</div>
+							</div> -->
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</main>

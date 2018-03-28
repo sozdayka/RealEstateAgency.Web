@@ -1,0 +1,69 @@
+<header id="header" class="header header-fullwidth">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 col-lg-3">
+        <div class="site-branding">
+          <div class="wrap">
+            <h1 class="site-title">
+              <a [routerLink]="['/home']" rel="home">
+                <img src="../../images/logo.png" alt="HomeFind"></a>
+            </h1>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7 col-lg-9">
+        <div class="main-navigation-wrapper clearfix">
+          <a *nfIf="LoginStatus" id="add-property-link" class="add-property-link" href="add-property.html"> <i class="ion-ios-plus-outline"></i>
+            Мои заявки на просмотр (5)
+          </a>
+        
+          <a *nfIf="!LoginStatus" id="add-property-link" class="add-property-link" data-toggle="modal" data-target="#login-modal" href="#"> <i class="ion-ios-plus-outline"></i>
+            Вход / Регистрация
+          </a>
+
+        <nav id="main-navigation" class="main-navigation">
+          <div class="menu-primary-container">
+            <ul class="menu-primary clearfix">
+              <li class="current-menu-item menu-item-has-children">
+                <a [routerLink]="['/home']">Главная</a>
+
+              </li>
+
+              <li>
+                <a [routerLink]="['/filter']" rel="filter">Каталог</a>
+                <ul class="sub-menu">
+                  <li *ngFor="let item of categorys">
+                    <a [routerLink]="['/filter']" rel="filter">{{item.name}}</a>
+                  </li>
+                  
+                </ul>
+              </li>
+
+              <li *nfIf="LoginStatus">
+                <a>Личный кабинет</a>
+                <ul class="sub-menu">
+                  <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/edit-my-profile']">Настройки профиля</a>
+                  </li>
+                  <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/my-profile']">Список заявок</a>
+                  </li>
+                  <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/list-of-real-estate']">Список недвижимости</a>
+                  </li>
+                  <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/logout']">Выйти</a>
+                  </li>
+                  
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+</header>

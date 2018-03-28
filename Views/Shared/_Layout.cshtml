@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="@(Url.Content("~/"))" />
+    <title>@ViewData["Title"]</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @Html.Raw(ViewData["Meta"])
+    @Html.Raw(ViewData["Links"])
+
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link href="~/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/css/ionicons.min.css" rel="stylesheet">
+    <link href="~/js/flexslider/flexslider.css" rel="stylesheet">
+    <link href="~/js/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="~/js/owl.carousel/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link href="~/js/select2/css/select2.min.css" rel="stylesheet">
+    <link href="~/js/slicknav/slicknav.min.css" rel="stylesheet">
+    <link href="~/js/lightcase/css/lightcase.css" rel="stylesheet">
+   
+    <link href="~/css/main.css" rel="stylesheet">
+    <link href="~/css/theme.css" rel="stylesheet">
+
+
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/0.8.2/css/flag-icon.min.css" />
+    <!-- <link rel="stylesheet" href="~/dist/vendor.css" asp-append-version="true" /> -->
+
+    @Html.Raw(ViewData["Styles"])
+
+  </head>
+  <body>
+    <!-- Loader -->
+    <div id="fakeLoader" class="fakeLoader"></div>
+    
+    @RenderBody()
+
+    <!-- Here we're passing down any data to be used by grabbed and parsed by Angular -->
+    @Html.Raw(ViewData["TransferData"])
+    @Html.Raw(ViewData["Scripts"])
+
+    @RenderSection("scripts", required: false)
+
+  </body>
+</html>

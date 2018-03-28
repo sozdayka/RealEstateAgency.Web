@@ -1,0 +1,35 @@
+﻿<!-- Remove this if you want to remove Server-side rendering -->
+@Html.Raw(ViewData["SpaHtml"])
+
+<!-- if you only want Client-side rendering uncomment this -->
+<!-- <app-root></app-root> -->
+
+<script src="~/dist/vendor.js" asp-append-version="true"></script>
+@section scripts {
+    <!-- Our webpack bundle -->
+    <script src="~/dist/main-client.js" asp-append-version="true"></script>
+}
+
+
+<!-- Required Plugins and Scripts -->
+<script src="~/js/jquery-3.2.1.min.js"></script>
+<script src="~/js/popper.min.js"></script>
+<script src="~/js/bootstrap.min.js"></script>
+
+<!-- <script src="~/js/jquery-migrate-3.0.1.js"></script>-->
+
+
+<script src="~/js/flexslider/jquery.flexslider-min.js"></script>
+<!--<script src="~/js/owl.carousel/owl.carousel.min.js"></script>
+<script src="~/js/select2/js/select2.min.js"></script>
+<script src="~/js/slicknav/jquery.slicknav.min.js"></script>
+<script src="~/js/lightcase/vendor/jQuery/jquery.events.touch.js"></script>
+<script src="~/js/lightcase/js/lightcase.js"></script>
+<script src="~/js/fakeLoader/fakeLoader.min.js"></script>
+<script src="~/js/jquery.form.min.js"></script>
+<script src="~/js/jquery.validate.min.js"></script>
+<script src="~/js/ResizeSensor.js"></script>
+<script src="~/js/sticky-sidebar.min.js"></script> -->
+<script src="~/js/scripts.js"></script>
+
+ <script src="~/js/login-modal.js"></script>
