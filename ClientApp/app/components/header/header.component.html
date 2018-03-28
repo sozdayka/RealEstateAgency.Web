@@ -14,11 +14,11 @@
       </div>
       <div class="col-md-7 col-lg-9">
         <div class="main-navigation-wrapper clearfix">
-          <a *nfIf="LoginStatus" id="add-property-link" class="add-property-link" href="add-property.html"> <i class="ion-ios-plus-outline"></i>
+          <a *ngIf="LoginStatus" id="add-property-link" class="add-property-link" href="add-property.html"> <i class="ion-ios-plus-outline"></i>
             Мои заявки на просмотр (5)
           </a>
         
-          <a *nfIf="!LoginStatus" id="add-property-link" class="add-property-link" data-toggle="modal" data-target="#login-modal" href="#"> <i class="ion-ios-plus-outline"></i>
+          <a *ngIf="!LoginStatus" id="add-property-link" class="add-property-link" data-toggle="modal" data-target="#login-modal" href="#"> <i class="ion-ios-plus-outline"></i>
             Вход / Регистрация
           </a>
 
@@ -40,7 +40,7 @@
                 </ul>
               </li>
 
-              <li *nfIf="LoginStatus">
+              <li *ngIf="LoginStatus">
                 <a>Личный кабинет</a>
                 <ul class="sub-menu">
                   <li [routerLinkActive]="['link-active']">
