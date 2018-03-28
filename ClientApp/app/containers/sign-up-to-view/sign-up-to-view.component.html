@@ -21,9 +21,19 @@
 <div class="container page-container add-property">
   <main id="main" class="main">
 
-    <div id="add-property-form" class="add-property-form">
-
-      <div class="row">
+    <div  id="add-property-form" class="add-property-form">
+        <div class="notice" *ngIf="!LoginStatus" >
+            <div class="row">
+                <div class="col-lg-9">
+                    <p>Запись на просмотр доступна только зарегистированным пользователями. Войдите или зарегистрируйтесь
+                    </p>
+                </div>
+                <div class="col-lg-3">
+                    <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#login-modal">Вход / регистрация</button>
+                </div>
+            </div>
+        </div>
+      <div class="row" *ngIf="LoginStatus" >
         <div class="col-lg-6 widget widget_popular_listing">
           <label>Ваш выбор</label>
 
@@ -82,24 +92,24 @@
   </main>
 </div>
 
-<!-- Alert - ->
-<div class="swal-overlay swal-overlay--show-modal" tabindex="-1" data-vivaldi-spatnav-clickable="1">
+<!-- Alert -->
+<div *ngIf="showModalUnsver" class="swal-overlay swal-overlay--show-modal" tabindex="-1" data-vivaldi-spatnav-clickable="1">
   <div class="swal-modal" role="dialog" aria-modal="true">
-    <div class="swal-icon swal-icon--error">
+    <div *ngIf="showModalUnsverStatus" class="swal-icon swal-icon--error">
       <div class="swal-icon--error__x-mark">
         <span class="swal-icon--error__line swal-icon--error__line--left"></span>
         <span class="swal-icon--error__line swal-icon--error__line--right"></span>
       </div>
     </div>
-    <div class="swal-icon swal-icon--success">
+    <div *ngIf="showModalUnsverStatus" class="swal-icon swal-icon--success">
       <span class="swal-icon--success__line swal-icon--success__line--long"></span>
       <span class="swal-icon--success__line swal-icon--success__line--tip"></span>
 
       <div class="swal-icon--success__ring"></div>
       <div class="swal-icon--success__hide-corners"></div>
     </div>
-    <div class="swal-title" style="">Спасиобо за Ваш визит!</div>
-    <div class="swal-text" style="">А текст кнопик был `не нажимать` :)</div>
+    <div class="swal-title">Спасиобо за Ваш визит!</div>
+    <div class="swal-text">А текст кнопик был `не нажимать` :)</div>
     <div class="swal-footer">
       <div class="swal-button-container">
 

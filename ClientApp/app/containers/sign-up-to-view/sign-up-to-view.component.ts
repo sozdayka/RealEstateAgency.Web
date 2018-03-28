@@ -5,6 +5,11 @@ import { Component, OnInit } from '@angular/core';
     templateUrl: './sign-up-to-view.component.html'
 })
 export class SignUpToViewComponent implements OnInit {
+
+    public LoginStatus:boolean = false;
+    public showModalUnsver:boolean = false;
+    public showModalUnsverStatus:boolean = false;
+
     constructor() { }
 
     ngOnInit() { }

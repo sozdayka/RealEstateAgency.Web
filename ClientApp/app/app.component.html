@@ -24,7 +24,7 @@
 
 
 <!-- Login / Register Modal -->
-<div class="modal login-modal fade" id="login-modal" tabindex="-1" role="dialog">
+<div *ngIf="!LoginStatus" class="modal login-modal fade" id="login-modal" tabindex="-1" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
