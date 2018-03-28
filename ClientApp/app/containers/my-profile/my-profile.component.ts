@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyProfileComponent implements OnInit {
 
-    public RoleStatus:boolean = true;
+    public RoleStatus:boolean = true; //true == admin | false == user
+    public clickMore:boolean = false; //status in array | true/false
 
     constructor() { }
 
