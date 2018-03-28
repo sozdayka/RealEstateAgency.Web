@@ -17,7 +17,9 @@ import { REQUEST } from '@nguniversal/aspnetcore-engine/tokens';
     encapsulation: ViewEncapsulation.None
 })
 export class AppComponent implements OnInit, OnDestroy {
+    public LoginStatus:boolean = false;
 
+    
     // This will go at the END of your title for example "Home - Angular Universal..." <-- after the dash (-)
     private endPageTitle: string = 'Angular Universal and ASP.NET Core Starter';
     // If no Title is provided, we'll use a default one before the dash(-)
